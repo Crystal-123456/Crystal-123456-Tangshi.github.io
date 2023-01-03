@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8" />
+  <title>第4部分</title>
+  <!-- 引入刚刚下载的 ECharts 文件 -->
+  <link rel="stylesheet" href="./css/public.css">
+  <link rel="stylesheet" href="./css/index.css">
+  <script src="./js/echarts.js"></script>
+  <script src="./js/vintage.js"></script>
+</head>
+
+<body>
+  <div id="four" class="partBox">
+    <!-- 标题 -->
+    <div class="partTitle">
+      <span>九重阊阖开天阙</span>
+      <div class="partImg">
+        <img src="./image/牡丹.png" alt="" width="50px" height="50px">
+      </div>
+    </div>
+    <!-- 简介 -->
+    <div class="jj">
+      <p>
+        唐代建筑是中国封建社会经济文化发展的高潮时期，建筑技术和艺术也有巨大发展。
+        唐朝建筑的风格特点是气魄宏伟，严整开朗。建筑发展到了一个成熟的时期，形成了一个完整的建筑体系。
+        它规模宏大，气势磅礴，形体俊美，庄重大方，整齐而不呆板，华美而不纤巧，舒展而不张扬，
+        古朴却富有活力，正是当时时代精神的完美体现。
+        如今中国现存的唐代建筑仍有百十余座，砖石建筑在其中占绝大多数。
+      </p>
+    </div>
+    <div class="echarts_table">
+      <div id="fourmain" style="height:800px;">
+        <script type="text/javascript">
+          // 基于准备好的dom，初始化echarts实例
+          var myfourChart = echarts.init(document.getElementById('fourmain'), 'vintage');
+          const formatUtil = echarts.format;
+          var optionfour = {
+            title: {
+              left: 'center',
+              text: '唐朝建筑在唐诗中出现次数',
+              top: "3%",
+              textStyle: {
+                fontSize: 26,
+                color: "rgba(230, 106, 93, 1)",
+                fontStyle: "normal"
+              },
+              subtextStyle: {
+                fontSize: 20
+              },
+              padding: [9, 9, 9, 9]
+            },
+            tooltip: {
+              formatter: function (info) {
+                if (info.data.name == "亭 1396") {
+                  return [
+                    `<div class="ting"></div>`
+                  ].join('');
+                } else if (info.data.name == "台 2809") {
+                  return [
+                    `<div class="tai"></div>`
+                  ].join('');
+                } else if (info.data.name == "楼 3254") {
+                  return [
+                    `<div class="lou"></div>`
+                  ].join('');
+                } else if (info.data.name == "阁 1571") {
+                  return [
+                    `<div class="ge"></div>`
+                  ].join('');
+                } else if (info.data.name == "殿 1142") {
+                  return [
+                    `<div class="dian"></div>`
+                  ].join('');
+                } else if (info.data.name == "寺 1449") {
+                  return [
+                    `<div class="si"></div>`
+                  ].join('');
+                } else if (info.data.name == "观 898") {
+                  return [
+                    `<div class="guan"></div>`
+                  ].join('');
+                } else if (info.data.name == "池 2337") {
+                  return [
+                    `<div class="chi"></div>`
+                  ].join('');
+                } else if (info.data.name == "市 563") {
+                  return [
+                    `<div class="shi"></div>`
+                  ].join('');
+                } else if (info.data.name == "宫 2342") {
+                  return [
+                    `<div class="gong"></div>`
+                  ].join('');
+                } else if (info.data.name == "阙 1135") {
+                  return [
+                    `<div class="que"></div>`
+                  ].join('');
+                } else if (info.data.name == "坊 110") {
+                  return [
+                    `<div class="fang"></div>`
+                  ].join('');
+                } else if (info.data.name == "府 881") {
+                  return [
+                    `<div class="fu"></div>`
+                  ].join('');
+                } else if (info.data.name == "城 4641") {
+                  return [
+                    `<div class="cheng"></div>`
+                  ].join('');
+                } else if (info.data.name == "轩 1072") {
+                  return [
+                    `<div class="xuan"></div>`
+                  ].join('');
+                }
+              }
+            },
+
+            series: [{
+              type: 'treemap',
+              data: [{
+                  name: '1',
+                  value: 1396,
+                  children: [{
+                      name: '亭 1396',
+                      value: 1396
+                    },
+
+                  ]
+                },
+                {
+                  name: '2',
+                  value: 2809,
+                  children: [{
+                      name: '台 2809',
+                      value: 2809
+                    },
+
+                  ]
+                },
+                {
+                  name: '3',
+                  value: 3254,
+                  children: [{
+                      name: '楼 3254',
+                      value: 3254
+                    },
+
+                  ]
+                },
+                {
+                  name: '4',
+                  value: 1571,
+                  children: [{
+                      name: '阁 1571',
+                      value: 1571
+                    },
+
+                  ]
+                },
+                {
+                  name: '3',
+                  value: 3254,
+                  children: [{
+                      name: '轩 1072',
+                      value: 3254
+                    },
+
+                  ]
+                },
+                {
+                  name: '6',
+                  value: 1142,
+                  children: [{
+                      name: '殿 1142',
+                      value: 1142
+                    },
+
+                  ]
+                },
+                {
+                  name: '7',
+                  value: 1449,
+                  children: [{
+                      name: '寺 1449',
+                      value: 1449
+                    },
+
+                  ]
+                },
+                {
+                  name: '8',
+                  value: 898,
+                  children: [{
+                      name: '观 898',
+                      value: 898
+                    },
+
+                  ]
+                },
+                {
+                  name: '9',
+                  value: 2337,
+                  children: [{
+                      name: '池 2337',
+                      value: 2337
+                    },
+
+                  ]
+                },
+                {
+                  name: '10',
+                  value: 563,
+                  children: [{
+                      name: '市 563',
+                      value: 563
+                    },
+
+                  ]
+                },
+                {
+                  name: '11',
+                  value: 2342,
+                  children: [{
+                      name: '宫 2342',
+                      value: 2342
+                    },
+
+                  ]
+                },
+                {
+                  name: '12',
+                  value: 1135,
+                  children: [{
+                      name: '阙 1135',
+                      value: 1135
+                    },
+
+                  ]
+                },
+                {
+                  name: '13',
+                  value: 110,
+                  children: [{
+                      name: '坊 110',
+                      value: 110
+                    },
+
+                  ]
+                },
+                {
+                  name: '14',
+                  value: 881,
+                  children: [{
+                      name: '府 881',
+                      value: 881
+                    },
+
+                  ]
+                },
+                {
+                  name: '15',
+                  value: 4641,
+                  children: [{
+                      name: '城 4641',
+                      value: 4641
+                    },
+
+                  ]
+                }
+              ]
+            }]
+          };
+
+          myfourChart.setOption(optionfour);
+          window.onresize = function () {
+            myfourChart.resize();
+          }
+        </script>
+      </div>
+    </div>
+  </div>
+</body>
+<script src="./js/4.js"></script>
+
+</html>
